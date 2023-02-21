@@ -1,0 +1,33 @@
+// Require
+
+// Default variable overrides
+$body-bg: #fff;
+$body-color: #333;
+
+$primary: #e00366;
+// fc2f94
+$danger: #ff4136;
+
+// $theme-colors: (
+//   "primary": $primary,
+//   "danger": $danger
+// );
+
+.btn-link {
+  text-decoration: none!important;
+}
+.btn-primary {
+  // --bs-btn-color: #FFF!important;
+}
+
+@import "bootstrap/scss/bootstrap";
+
+// Required
+// @import "bootstrap/scss/_variables";
+// @import "bootstrap/scss/_mixins";
+
+// // Optional Bootstrap components here
+// @import "bootstrap/scss/_root";
+// @import "bootstrap/scss/_reboot";
+// @import "bootstrap/scss/_type";
+// etc
