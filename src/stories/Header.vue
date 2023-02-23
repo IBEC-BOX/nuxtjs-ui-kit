@@ -22,9 +22,9 @@
       </div>
       <div>
         <span class="welcome" v-if="user">Welcome, <b>{{ user.name }}</b>!</span>
-        <my-button size="small" @onClick="onLogout" label="Log out" v-if="user" />
-        <my-button size="small" @onClick="onLogin" label="Log in" v-if="!user" />
-        <my-button primary size="small" @onClick="onCreateAccount" label="Sign up" v-if="!user" />
+        <my-button size="small" @onClick="onLogout" aria-hidden="true"  label="Log out" v-if="user" />
+        <my-button size="small" @onClick="onLogin" aria-hidden="true" label="Log in" v-if="!user" aria-label="Log in button" />
+        <my-button primary size="small" @onClick="onCreateAccount" aria-hidden="true" label="Sign up" v-if="!user" />
       </div>
     </div>
   </header>
