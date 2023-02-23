@@ -15,7 +15,9 @@
     "build": "vue-cli-service build",
     "build:npm": "npm run build:wc & npm run build:lib",
     "build:lib": "vue-cli-service build --target lib --name myComponents 'src/main.js'",
-    "build:wc": "vue-cli-service build --target wc --name myComponents 'src/components/*.vue'"
+    "build:wc": "vue-cli-service build --target wc --name myComponents 'src/components/*.vue'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "main": "dist/myComponents.umd.js",
   "unpkg": "dist/myComponents.umd.min.js",
@@ -28,13 +30,23 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue": "^6.5.16",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "babel-loader": "^8.3.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.58.1",
     "sass-loader": "^13.2.0",
+    "vue-loader": "^15.10.1",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
