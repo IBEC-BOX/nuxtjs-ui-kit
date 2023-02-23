@@ -17,7 +17,8 @@
     "build:lib": "vue-cli-service build --target lib --name myComponents 'src/main.js'",
     "build:wc": "vue-cli-service build --target wc --name myComponents 'src/components/*.vue'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "main": "dist/myComponents.umd.js",
   "unpkg": "dist/myComponents.umd.min.js",
@@ -68,5 +69,7 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "readme": "ERROR: No README data found!",
+  "_id": "ibec-ui-header@0.1.4"
 }
