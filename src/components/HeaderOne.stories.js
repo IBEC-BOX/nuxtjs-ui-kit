@@ -90,17 +90,32 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+  'header-left-body': '<a href="https://storybook.js.org/">Built with Storybook</a>',
+  logo: Logo,
+  social: [
+    {id: 1, url: '/', name: 'https://test-backend.eurasia-life.com/storage/acn5EnSZTVpWxR6PNyOp5bqoazLaLViyn70UA3WD.png'},
+    {id: 12, url: '/', name: 'https://test-backend.eurasia-life.com/storage/7FtDkKgFIXVVyzRrgG8kCarcFhKJTtaK4Ni7gG7M.png'}
+  ],
+  menu: [
+    {id:1, url: '/1', name: 'Меню 1'},
+    {
+      id:2,
+      url: '/2', 
+      name: 'Меню 2',
+      items: [
+        {id:7, url: '/7', name: 'Меню 7'},
+        {id:8, url: '/8', name: 'Меню 8'},
+        {id:9, url: '/9', name: 'Меню 9'},
+      ]
+    },
+    {id:3, url: '/3', name: 'Меню 3'},
+    {id:4, url: '/4',
+    items: [
+        {id:17, url: '/17', name: 'Меню 17'},
+        {id:18, url: '/18', name: 'Меню 18'},
+        {id:19, url: '/19', name: 'Меню 19'},
+      ], name: 'Меню 4'},
+    {id:5, url: '/5', name: 'Меню 5'},
+    {id:6, url: '/6', name: 'Меню 6'}
+  ],
 };
