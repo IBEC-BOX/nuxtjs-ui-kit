@@ -7,6 +7,7 @@ Vue.component('NuxtLink', {
 
 Vue.prototype.$i18n = {locale: 'ru'};
 Vue.prototype.$t = (v) => v;
+Vue.prototype.localePath = (v) => v;
 
 
 import { addDecorator } from '@storybook/vue';

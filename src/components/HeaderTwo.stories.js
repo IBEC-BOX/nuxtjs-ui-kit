@@ -1,10 +1,10 @@
-import HeaderOne from './HeaderOne.vue';
+import HeaderTwo from './HeaderTwo.vue';
 import Logo from '../stories/assets/logo.svg';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: 'Headers/HeaderOne',
-  component: HeaderOne,
+  title: 'Headers/HeaderTwo',
+  component: HeaderTwo,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     // backgroundColor: { control: 'color' },
@@ -18,9 +18,9 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { HeaderOne },
+  components: { HeaderTwo },
   // template: '<HeaderOne v-bind="$props" />',
-  template: `<HeaderOne v-bind="$props">
+  template: `<HeaderTwo v-bind="$props">
   <template v-slot:header-left-body>
     <a class="btn btn-link" href="#ya">Версия для слабовидящих</a>
   </template>
@@ -51,7 +51,7 @@ const Template = (args, { argTypes }) => ({
       <a class="btn btn-link p-0" href="#ya">Версия для слабовидящих</a>
     </div>
   </template>
-</HeaderOne>`
+</HeaderTwo>`
 
 });
 
@@ -59,29 +59,27 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   logo: Logo,
+  langs: [
+    {
+        value: 'ru',
+        label: 'Рус'
+    },
+    {
+        value: 'kk',
+        label: 'Қаз'
+    },
+    {
+        value: 'en',
+        label: 'Eng'
+    }
+  ],
   social: [
     {id: 1, url: '/', name: 'https://test-backend.eurasia-life.com/storage/acn5EnSZTVpWxR6PNyOp5bqoazLaLViyn70UA3WD.png'},
     {id: 12, url: '/', name: 'https://test-backend.eurasia-life.com/storage/7FtDkKgFIXVVyzRrgG8kCarcFhKJTtaK4Ni7gG7M.png'}
   ],
   menu: [
     {id:1, url: '/1', name: 'Пункт 1'},
-    {
-      id:2,
-      url: '/2', 
-      name: 'Пункт 2',
-      items: [
-        {id:7, url: '/7', name: 'Пункт 7'},
-        {id:8, url: '/8', name: 'Пункт 8'},
-        {id:9, url: '/9', name: 'Пункт 9'},
-      ]
-    },
     {id:3, url: '/3', name: 'Пункт 3'},
-    {id:4, url: '/4',
-    items: [
-        {id:17, url: '/17', name: 'Пункт 17'},
-        {id:18, url: '/18', name: 'Пункт 18'},
-        {id:19, url: '/19', name: 'Пункт 19'},
-      ], name: 'Пункт 4'},
     {id:5, url: '/5', name: 'Пункт 5'},
     {id:6, url: '/6', name: 'Пункт 6'}
   ],

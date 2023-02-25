@@ -1,15 +1,16 @@
 // import components here
 //  import HeaderOne from "./components/HeaderOne.vue";
- import Test2 from "./components/test2.vue";
+//  import Test2 from "./components/HeaderTwo.vue";
  import Test3 from "./components/MyComponent.vue";
  
  // export components for this library
 
 export { default as HeaderOne } from "./components/HeaderOne.vue";
+export { default as HeaderTwo } from "./components/HeaderTwo.vue";
 
  export default {
   //  HeaderOne,
-   Test2,
+  //  Test2,
    Test3
  };
 
