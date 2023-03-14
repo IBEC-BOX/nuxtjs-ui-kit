@@ -134,7 +134,7 @@ export default {
     props: {
         langs: {
           type: Array,
-          dafault: [
+          default: () => [
             {
               value: 'ru',
               label: 'Рус'
@@ -151,16 +151,16 @@ export default {
         },
         menu: {
             type: Array,
-            dafault:() => []
+            default:() => []
         },
         social: {
             type: Array,
-            dafault:() => []
+            default:() => []
         },
         logo: String,
         arrowSvg: {
             type: String,
-            dafault: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#797979" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            default: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#797979" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
         }
     },
     mounted() {
@@ -278,7 +278,7 @@ export default {
                     font-size: 20px;
                     line-height: 32px;
                     letter-spacing: -0.242736px;
-                    color: #797979;
+                    //color: #797979;
                     color: #38AA34;
                 }
                 p {
@@ -325,7 +325,7 @@ export default {
         &-first {
             background-color: #F5F5F6;
             &-body {
-                padding: 12px 0px;
+                padding: 12px 0;
                 height: 68px;
                 display: flex;
                 align-items: center;
@@ -459,7 +459,7 @@ export default {
                     display: none;
                     background: #FFFFFF;
                     padding: 22px 24px 14px; 
-                    box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+                    box-shadow: 0 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
                     border-radius: 16px;
                     position: absolute;
                     &::before {

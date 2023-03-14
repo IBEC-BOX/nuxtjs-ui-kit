@@ -93,20 +93,20 @@ export default Vue.extend({
     props: {
         menu: {
             type: Array,
-            dafault:() => []
+            default:() => []
         },
         social: {
             type: Array,
-            dafault:() => []
+            default:() => []
         },
         logo: String,
         arrowSvg: {
             type: String,
-            dafault: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#797979" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            default: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#797979" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
         },
         langs: {
           type: Array,
-          dafault: [
+          default: () => [
             {
               value: 'ru',
               label: 'Рус'
