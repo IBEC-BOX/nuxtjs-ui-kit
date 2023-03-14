@@ -106,7 +106,7 @@ export default Vue.extend({
         },
         langs: {
           type: Array,
-          dafault:() => [
+          dafault: [
             {
               value: 'ru',
               label: 'Рус'
