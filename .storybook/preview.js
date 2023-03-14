@@ -9,6 +9,10 @@ Vue.prototype.$i18n = {locale: 'ru'};
 Vue.prototype.$t = (v) => v;
 Vue.prototype.localePath = (v) => v;
 
+import VeeValidate from 'vee-validate';
+// Install VeeValidate into Vue
+Vue.use(VeeValidate);
+
 
 import { addDecorator } from '@storybook/vue';
 // import { withGlobals } from '@luigiminardim/storybook-addon-globals-controls';

@@ -132,6 +132,23 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"
 export default {
     name: 'HeaderOne',
     props: {
+        langs: {
+          type: Array,
+          dafault:() => [
+            {
+              value: 'ru',
+              label: 'Рус'
+            },
+            {
+              value: 'kk',
+              label: 'Қаз'
+            },
+            {
+              value: 'en',
+              label: 'Eng'
+            }
+          ]
+        },
         menu: {
             type: Array,
             dafault:() => []
@@ -154,20 +171,6 @@ export default {
             opens: [],
             show: false,
             mount: false,
-            langs: [
-                {
-                    value: 'ru',
-                    label: 'Рус'
-                },
-                {
-                    value: 'kk',
-                    label: 'Қаз'
-                },
-                {
-                    value: 'en',
-                    label: 'Eng'
-                }
-            ]
         };
     },
     computed: {},

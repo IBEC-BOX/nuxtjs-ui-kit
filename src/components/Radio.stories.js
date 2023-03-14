@@ -1,9 +1,9 @@
-import Checkbox from './Checkbox.vue';
+import Radio from './Radio.vue';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: 'Form/Checkbox',
-  component: Checkbox,
+  title: 'Form/Radio',
+  component: Radio,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     value: { control: 'array' },
@@ -21,8 +21,8 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Checkbox },
-  template: '<Checkbox v-bind="$props" v-validate="validateExample" v-model="value" />',
+  components: { Radio },
+  template: '<Radio v-bind="$props" v-validate="validateExample" v-model="value" />',
 });
 
 export const Primary = Template.bind({});

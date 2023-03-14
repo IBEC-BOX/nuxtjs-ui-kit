@@ -1,8 +1,9 @@
 {
-  "name": "ibec-ui-header",
-  "version": "0.1.4",
+  "name": "ibec-ui-kit",
+  "my-old-module-name": "ibec-ui-header",
+  "version": "0.1.5",
   "private": false,
-  "description": "Describes my component",
+  "description": "Ibec components",
   "files": [
     "dist"
   ],
@@ -25,8 +26,11 @@
   "dependencies": {
     "bootstrap": "5.3.0-alpha1",
     "core-js": "^3.8.3",
+    "vee-validate": "<3.0.0",
     "vue": "^2.6.14",
-    "vue-i18n": "^9.2.2"
+    "vue-i18n": "^9.2.2",
+    "vue-select": "^3.20.2",
+    "vuelidate": "^0.7.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -71,5 +75,5 @@
     "not dead"
   ],
   "readme": "ERROR: No README data found!",
-  "_id": "ibec-ui-header@0.1.4"
+  "_id": "ibec-ui-kit@0.1.5"
 }
