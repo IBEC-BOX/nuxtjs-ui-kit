@@ -1,7 +1,7 @@
 {
   "name": "ibec-ui-kit",
   "my-old-module-name": "ibec-ui-header",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "description": "Ibec components",
   "files": [
@@ -15,14 +15,14 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:npm": "npm run build:wc & npm run build:lib",
-    "build:lib": "vue-cli-service build --target lib --name myComponents 'src/main.js'",
-    "build:wc": "vue-cli-service build --target wc --name myComponents 'src/components/*.vue'",
+    "build:lib": "vue-cli-service build --target lib --name ibecUiKit 'src/main.js'",
+    "build:wc": "vue-cli-service build --target wc --name ibecUiKit 'src/components/*.vue'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "chromatic --exit-zero-on-changes"
   },
-  "main": "dist/myComponents.umd.js",
-  "unpkg": "dist/myComponents.umd.min.js",
+  "main": "dist/ibecUiKit.umd.js",
+  "unpkg": "dist/ibecUiKit.umd.min.js",
   "dependencies": {
     "bootstrap": "5.3.0-alpha1",
     "core-js": "^3.8.3",
