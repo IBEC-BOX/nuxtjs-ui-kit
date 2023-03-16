@@ -21,7 +21,7 @@
         </div>
         <div class="form-text">{{ description }}</div>
         <div class="invalid-feedback">
-            {{ errors.items.find((x) => x.field === name)?.msg }}
+            {{ errors && errors.items && errors.items.find((x) => x.field === name) ? errors.items.find((x) => x.field === name).msg : '' }}
         </div>
     </div>
   </div>

@@ -7,7 +7,7 @@ Vue.component('NuxtLink', {
 
 Vue.prototype.$i18n = {locale: 'ru'};
 Vue.prototype.$t = (v) => v;
-Vue.prototype.localePath = (v) => v;
+Vue.prototype.localePath = (v) => `/locale${v}`;
 
 import VeeValidate from 'vee-validate';
 // Install VeeValidate into Vue
@@ -21,6 +21,7 @@ import { addDecorator } from '@storybook/vue';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/components/main.scss'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 // Задание значений глобальных переменных Bootstrap
 const myBootstrapGlobals = {
@@ -47,7 +48,7 @@ export const globalTypes = {
 
 addDecorator((storyFn, { globals }) => {
   // Задание значений переменных Bootstrap в зависимости от выбранного значения в Storybook
-  // console.log(document.documentElement.style);
+  console.log(document.documentElement.style, 'asdasd');
   if (globals.bootstrap === 'myBootstrapGlobals') {
     Object.assign(document.documentElement.style, myBootstrapGlobals);
   } else {

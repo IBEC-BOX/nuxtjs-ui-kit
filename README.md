@@ -24,12 +24,12 @@ yarn add ibec-ui-kit
 </template>
 
 <script lang="js">
-import UI from 'ibec-ui-kit';
+import {HeaderOne} from 'ibec-ui-kit';
 
 export default {
   name: 'MyComponent',
   components: {
-    HeaderOne: UI.HeaderOne,
+    HeaderOne: HeaderOne,
   },
 };
 </script>
@@ -58,7 +58,7 @@ Check out the code on github, [d.tem4ik/ibec-ui-kit](https://ibecsystems.com/ru#
 
 ## Documentation
 StoryBook
-[documentation](https://63f77fcfd12622a3e085e406-mgdcjffkuw.chromatic.com/?path=/story/example-introduction--page)
+[documentation](http://www.chromatic.com/library?appId=63f77fcfd12622a3e085e406)
 
 ## Changelog
 All notable changes to this project will be documented in this file.

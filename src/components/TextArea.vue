@@ -16,7 +16,7 @@
           :data-vv-as="name"
       ></textarea>
       <div :id="`${name}-live-feedback`" class="invalid-feedback">
-        {{ errors.items.find((x) => x.field === name)?.msg }}
+        {{ errors && errors.items && errors.items.find((x) => x.field === name) ? errors.items.find((x) => x.field === name).msg : '' }}
       </div>
       <div class="form-text">{{ description }}</div>
     </div>

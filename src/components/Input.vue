@@ -16,7 +16,7 @@
         :class="{'is-invalid': errors && errors.items.find((x) => x.field === name)}"
       >
       <div v-if="errors" class="invalid-feedback">
-        {{ errors.items.find((x) => x.field === name)?.msg }}
+        {{ errors && errors.items && errors.items.find((x) => x.field === name) ? errors.items.find((x) => x.field === name).msg : '' }}
       </div>
       <div class="form-text">{{ description }}</div>
     </div>
