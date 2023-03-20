@@ -89,6 +89,13 @@ const Template = (args, { argTypes }) => ({
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
+Primary.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/UmrBZaCGhezw0qx9xuq7Xf/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0?node-id=116-3467&t=730f4TgCEIK6W6Hj-4',
+  },
+}
+
 Primary.args = {
   variant: 'primary',
 };

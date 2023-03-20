@@ -1,5 +1,6 @@
 <template>
   <button
+    :title="!title ? 'icon' : ''"
     v-if="!link"
     :class="[
       'btn',
@@ -21,6 +22,7 @@
 
   </button>
   <NuxtLink
+    :title="!title ? 'icon' : ''"
     v-else
     :class="[
       'btn',

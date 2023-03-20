@@ -8,8 +8,13 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    'storybook-addon-designs',
+    '@storybook/addon-a11y',
     "@storybook/addon-interactions",
   ],
+  features: {
+    interactionsDebugger: true, // 👈 Enable playback controls
+  },
   "framework": "@storybook/vue",
   "core": {
     "builder": "@storybook/builder-webpack5"
@@ -18,13 +23,17 @@ module.exports = {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
-
     // Make whatever fine-grained changes you need
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+
+
+
+    // Добавьте путь к вашим SVG файлам в resolve.alias
+    config.resolve.alias['@svg'] = path.resolve(__dirname, '../src/icons');
 
     // Return the altered config
     return config;

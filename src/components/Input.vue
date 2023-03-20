@@ -3,6 +3,7 @@
     <div class="mb-3">
       <label :for="name" class="form-label">{{ label }}</label>
       <input
+        :data-testid="name"
         :id="name"
         :name="name"
         :value="value"

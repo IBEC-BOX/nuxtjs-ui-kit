@@ -7,6 +7,7 @@
             'form-check-inline': inline
             }" class="form-check" v-for="(option, index) in options" :key="index">
             <input
+                :data-testid="name"
                 class="form-check-input"
                 type="checkbox"
                 :id="`${name}_${index}`"

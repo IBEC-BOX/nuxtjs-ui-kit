@@ -2,7 +2,7 @@
     <header id="header">
         <div class="container d-lg-flex d-none align-items-center justify-content-between header-pc h-100">
             <div class="logo-block d-flex align-items-center">
-                <nuxt-link :to="localePath('/')"><img id="headerLogo" :src="logo" alt="iQanat"></nuxt-link>
+                <nuxt-link :to="localePath('/')"><img class="headerLogo" id="headerLogoPC" :src="logo" alt="iQanat"></nuxt-link>
             </div>
             <nav>
             <ul class="header-menu">
@@ -15,7 +15,7 @@
             <div class="d-flex align-items-center">
                 <a @click="$bvModal.show('bv-modal-example-call')" class="header-menu-link" href="#">{{$t('Остались вопросы?')}}</a>
                 <div class="header-menu-links">
-                    <a :key="`socid-${soc.id}`" v-for="soc in social" :href="soc.url" class="me-3" target="_blank" rel="noopener noreferrer">
+                    <a :key="`socid-${soc.id}`" v-for="soc in social" :href="soc.url" :title="`social-${soc.id}`" class="me-3" target="_blank" rel="noopener noreferrer">
                         <img height="24" width="24" :src="soc.name" alt="">
                     </a>
                 </div>
@@ -30,7 +30,7 @@
             </div> -->
 
             <div class="header-button flex-column align-items-start px-3">
-                <div id="lang-select" class="dropdown header-dropdown text-dropdown">
+                <div id="lang-select-2" class="dropdown header-dropdown text-dropdown">
                     <button class="btn btn-link p-0 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="ms-1">{{langs.find(el => el.value === $i18n.locale).label}}</span>
                     </button>
@@ -43,14 +43,14 @@
         </div>
         <div class="container d-lg-none d-flex align-items-center justify-content-between header-pc h-100">
             <div class="logo-block d-flex align-items-center">
-                <nuxt-link :to="localePath('/')"><img id="headerLogo" :src="logo" alt="iQanat"></nuxt-link>
+                <nuxt-link :to="localePath('/')"><img class="headerLogo" id="headerLogoMob" :src="logo" alt="iQanat"></nuxt-link>
             </div>
             <div class="d-flex align-items-center">
-                <div id="lang-select" class="dropdown header-dropdown text-dropdown">
-                    <button class="btn btn-link p-0 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <div id="lang-select-1" class="dropdown header-dropdown text-dropdown">
+                    <button class="btn btn-link p-0 dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="ms-1">{{langs.find(el => el.value === $i18n.locale).label}}</span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                         <li v-for="lang in langs" :key="`lang-${lang.value}`"><a class="dropdown-item" href="#">{{ lang.label }}</a></li>
                     </ul>
                 </div>
@@ -72,7 +72,7 @@
                 </ul>
                 <div class="d-flex align-items-center">
                     <div class="header-menu-links mobile-menu-links">
-                        <a :key="`socid-${soc.id}`" v-for="soc in social" :href="soc.url" class="me-3" target="_blank" rel="noopener noreferrer">
+                        <a :key="`socid-${soc.id}`" v-for="soc in social" :href="soc.url" :title="`social-${soc.id}`" class="me-3" target="_blank" rel="noopener noreferrer">
                             <img height="24" width="24" :src="soc.name" alt="">
                         </a>
                     </div>
@@ -145,7 +145,7 @@ header#header {
     right: 0;
     top: 0;
     background: #FFFFFF;
-    #headerLogo {
+    .headerLogo {
         height: 75px;
         width: 95px;
     }

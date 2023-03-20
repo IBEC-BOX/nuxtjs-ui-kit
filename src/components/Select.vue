@@ -6,6 +6,7 @@
         :id="name"
         :name="name"
         :value="value"
+        :data-testid="name"
         :class="{
           'form-control': true,
           'is-invalid': errors && errors.items.find((x) => x.field === name),
@@ -64,6 +65,10 @@ export default {
   border: none;
   height: 100%;
   padding: 0;
+}
+
+.vs__dropdown-option {
+  pointer-events: auto;
 }
 .vs__selected {
   margin: 0;

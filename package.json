@@ -35,11 +35,13 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@storybook/addon-a11y": "^6.5.16",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/vue": "^6.5.16",
@@ -52,8 +54,9 @@
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.58.1",
     "sass-loader": "^13.2.0",
+    "storybook-addon-designs": "^6.3.1",
     "vue-loader": "^15.10.1",
-    "vue-template-compiler": "^2.6.14"
+    "vue-svg-inline-loader": "^2.1.5"
   },
   "eslintConfig": {
     "root": true,

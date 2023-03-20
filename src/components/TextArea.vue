@@ -4,6 +4,7 @@
       <label :for="name" class="form-label">{{ label }}</label>
       <textarea
           class="form-control"
+          :data-testid="name"
           :id="name"
           :name="name"
           :value="value"

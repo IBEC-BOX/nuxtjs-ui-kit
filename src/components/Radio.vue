@@ -5,6 +5,7 @@
         <div :class="{'is-invalid': errors && errors.items.find((x) => x.field === name)}">
             <div class="form-check" v-for="(option, index) in options" :key="index">
             <input
+                :data-testid="name"
                 class="form-check-input"
                 type="radio"
                 :id="`${name}_${index}`"

@@ -127,10 +127,14 @@
 
 // import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
+// import Button from '../../src/components/Button.vue'
 // import { Toast } from 'bootstrap.esm.min.js'
 
 export default {
     name: 'HeaderOne',
+    // components: {
+    //   Button
+    // },
     props: {
         langs: {
           type: Array,

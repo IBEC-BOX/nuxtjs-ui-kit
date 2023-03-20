@@ -123,11 +123,20 @@
             stacked
         />
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <FileSelect
+            v-model="form.files"
+            v-validate="{ min: 1, required: true }"
+            :limit="5"
+            :allowedExtensions="['doc','docx','pdf']"
+            name="FormFilesSelect"
+            label="Select File"
+        />
+
+        <button role="button" type="submit" class="btn btn-primary">Submit</button>
         <button type="reset" class="btn btn-danger">Reset</button>
       </form>
 
-      <div class="card mt-3">
+      <div class="card mt-3 FormDataResult">
         <div class="card-header">
           Form Data Result
         </div>
@@ -148,14 +157,16 @@ import Input from '../components/Input.vue';
 import TextArea from '../components/TextArea.vue';
 import Select from '../components/Select.vue';
 import CheckBox from '../components/Checkbox.vue';
+import FileSelect from '../components/FileSelect.vue';
 import Radio from '../components/Radio.vue';
+
 import HeaderOne from '../components/HeaderOne.vue';
 import HeaderTwo from '../components/HeaderTwo.vue';
 
 export default {
   name: 'my-page',
   props: ['SelectHeader'],
-  components: { Input, TextArea, Select, CheckBox, Radio, HeaderOne, HeaderTwo },
+  components: { Input, TextArea, Select, CheckBox, Radio, HeaderOne, HeaderTwo, FileSelect },
   data() {
     return {
       Logo,
@@ -166,6 +177,7 @@ export default {
         comment: '',
         radio: '',
         checked: [],
+        files: []
       },
       foods: [
         {text: 'Carrots', value: 'Carrots-Carrots'},
@@ -228,6 +240,7 @@ export default {
   },
   methods: {
     onSubmit() {
+      console.log(this.$validator)
       this.$validator.validateAll().then((result) => {
         console.log(result)
         if (!result) {

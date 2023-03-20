@@ -48,7 +48,7 @@ export const globalTypes = {
 
 addDecorator((storyFn, { globals }) => {
   // Задание значений переменных Bootstrap в зависимости от выбранного значения в Storybook
-  console.log(document.documentElement.style, 'asdasd');
+  // console.log(document.documentElement.style, 'asdasd');
   if (globals.bootstrap === 'myBootstrapGlobals') {
     Object.assign(document.documentElement.style, myBootstrapGlobals);
   } else {
