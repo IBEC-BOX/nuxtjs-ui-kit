@@ -1,8 +1,8 @@
 <template>
-  <div class="pb-5">
-    <HeaderOne v-if="SelectHeader == 'HeaderOne'" :menu="menu" :langs="langs" :logo="Logo" :social="social">
+  <div class="">
+    <HeaderOne v-if="SelectHeader === 'HeaderOne'" :menu="menu" :langs="langs" :logo="Logo" :social="social">
       <template v-slot:header-left-body>
-        <a class="btn btn-link" href="#ya">Версия для слабовидящих</a>
+        <a class="btn btn-link" href="#">Версия для слабовидящих</a>
       </template>
 
       <template v-slot:header-right-body>
@@ -28,13 +28,13 @@
           <a href="#" class="w-100 btn btn-primary btn-lg">Оплатить по договору</a>
         </div>
         <div class="header-button mb-4 flex-column align-items-start px-3">
-          <a class="btn btn-link p-0" href="#ya">Версия для слабовидящих</a>
+          <a class="btn btn-link p-0" href="#">Версия для слабовидящих</a>
         </div>
       </template>
     </HeaderOne>
-    <HeaderTwo v-else-if="SelectHeader == 'HeaderTwo'" :menu="menu" :langs="langs" :logo="Logo" :social="social">
+    <HeaderTwo v-else-if="SelectHeader === 'HeaderTwo'" :menu="menu" :langs="langs" :logo="Logo" :social="social">
       <template v-slot:header-left-body>
-        <a class="btn btn-link" href="#ya">Версия для слабовидящих</a>
+        <a class="btn btn-link" href="#">Версия для слабовидящих</a>
       </template>
 
       <template v-slot:header-right-body>
@@ -60,7 +60,7 @@
           <a href="#" class="w-100 btn btn-primary btn-lg">Оплатить по договору</a>
         </div>
         <div class="header-button mb-4 flex-column align-items-start px-3">
-          <a class="btn btn-link p-0" href="#ya">Версия для слабовидящих</a>
+          <a class="btn btn-link p-0" href="#">Версия для слабовидящих</a>
         </div>
       </template>
     </HeaderTwo>
@@ -145,6 +145,17 @@
         </div>
       </div>
     </div>
+    <FooterOne
+        :menu="menuFooter"
+        :apps="apps"
+        :logo="Logo"
+        :copyright="copyright"
+    >
+      <template v-slot:footer-apps-text>
+        <span>Get the app</span>
+      </template>
+
+    </FooterOne>
   </div>
 </template>
 
@@ -163,12 +174,86 @@ import Radio from '../components/Radio.vue';
 import HeaderOne from '../components/HeaderOne.vue';
 import HeaderTwo from '../components/HeaderTwo.vue';
 
+import FooterOne from '../components/Footer/FooterOne.vue';
+
+
 export default {
   name: 'my-page',
   props: ['SelectHeader'],
-  components: { Input, TextArea, Select, CheckBox, Radio, HeaderOne, HeaderTwo, FileSelect },
+  components: { Input, TextArea, Select, CheckBox, Radio, HeaderOne, HeaderTwo, FileSelect, FooterOne },
   data() {
     return {
+      copyright: `2023 Untitled UI. All rights reserverd`,
+      apps: [
+        {
+          id: 1,
+          title: 'Appstore',
+          link: '#appstore',
+          img: 'static/media/src/icons/appstore.svg',
+        },
+        {
+          id: 2,
+          title: 'Googleplay',
+          link: '#googleplay',
+          img: 'static/media/src/icons/googleplay.svg',
+        }
+      ],
+      menuFooter: [
+        {
+          id:2,
+          url: '/2',
+          name: 'Product',
+          items: [
+            {id:7, url: '/7', name: 'Overview'},
+            {id:8, url: '/8', name: 'Solutions'},
+            {id:9, url: '/9', name: 'Pricing'},
+            {id:9, url: '/9', name: 'Press'},
+            {id:9, url: '/9', name: 'Tutorials'},
+            {id:8, url: '/8', name: 'Solutions'},
+          ]
+        },
+        {
+          id:2,
+          url: '/2',
+          name: 'Company',
+          items: [
+            {id:7, url: '/7', name: 'Overview'},
+            {id:8, url: '/8', name: 'Solutions'},
+            {id:8, url: '/8', name: 'Overview'},
+            {id:9, url: '/9', name: 'Pricing'},
+          ]
+        },
+        {
+          id:2,
+          url: '/2',
+          name: 'Resources',
+          items: [
+            {id:7, url: '/7', name: 'Overview'},
+            {id:8, url: '/8', name: 'Solutions'},
+            {id:9, url: '/9', name: 'Pricing'},
+          ]
+        },
+        {
+          id:2,
+          url: '/2',
+          name: 'Social',
+          items: [
+            {id:7, url: '/7', name: 'Overview'},
+            {id:8, url: '/8', name: 'Solutions'},
+            {id:9, url: '/9', name: 'Pricing'},
+          ]
+        },
+        {
+          id:2,
+          url: '/2',
+          name: 'Legal',
+          items: [
+            {id:7, url: '/7', name: 'Overview'},
+            {id:8, url: '/8', name: 'Solutions'},
+            {id:9, url: '/9', name: 'Pricing'},
+          ]
+        },
+      ],
       Logo,
       form: {
         email: '',
