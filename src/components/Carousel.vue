@@ -149,8 +149,31 @@ export default {
   --bs-carousel-indicator-height: 8px;
   --bs-carousel-indicator-radius: 4px;
 
-  &-primary {--bs-carousel-background-color: var(--bs-primary); --bs-carousel-color: #FFF }
-  &-secondary {--bs-carousel-background-color: var(--bs-secondary);}
+  &-primary {
+    --bs-carousel-background-color: var(--bs-primary);
+    --bs-carousel-color: #FFF
+  }
+  &-outline-primary {
+    --bs-carousel-background-color: rgba(var(--bs-primary-rgb), 0.1);
+    --bs-carousel-color: var(--bs-primary);
+  }
+  &-light {
+    --bs-carousel-background-color: rgba(var(--bs-white-rgb), 0.9);
+    --bs-carousel-color: var(--bs-dark);
+  }
+  &-dark {
+    --bs-carousel-background-color: rgba(var(--bs-black-rgb), 0.9);
+    --bs-carousel-color: var(--bs-white);
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      filter: none;
+    }
+    .carousel-indicators [data-bs-target] {
+      background-color: var(--bs-carousel-color);
+    }
+  }
+  &-secondary {
+    --bs-carousel-background-color: var(--bs-secondary);
+  }
   &-lg {
     --bs-carousel-arrow-width: 24px;
     --bs-carousel-arrow-height: 24px;

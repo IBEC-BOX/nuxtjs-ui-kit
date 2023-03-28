@@ -21,20 +21,9 @@ export default {
       options: [
         'primary',
         'secondary',
-        'success',
-        'danger',
-        'warning',
-        'info',
         'light',
         'dark',
         'outline-primary',
-        'outline-secondary',
-        'outline-success',
-        'outline-danger',
-        'outline-warning',
-        'outline-info',
-        'outline-light',
-        'outline-dark'
       ]
     },
     size: { control: 'radio', options: ['md', 'lg', 'sm'] },
