@@ -1,6 +1,11 @@
 import FooterOne from './FooterOne.vue';
 import UiButton from '../Button.vue';
 import Logo from '../../stories/assets/logo.svg';
+import GitHab from '@svg/githab.svg';
+import Tg from '@svg/tg.svg';
+import Wp from '@svg/wp.svg';
+import appstore from '@svg/appstore.svg';
+import googleplay from '@svg/googleplay.svg';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
@@ -212,20 +217,20 @@ Primary.args = {
       id: 1,
       title: 'Appstore',
       link: '#appstore',
-      img: 'static/media/src/icons/appstore.svg',
+      img: appstore,
     },
     {
       id: 2,
       title: 'Googleplay',
       link: '#googleplay',
-      img: 'static/media/src/icons/googleplay.svg',
+      img: googleplay,
     }
   ],
   socials: [
-    {id: 1, link: '/', title: 'githab', img: 'static/media/src/icons/githab.svg'},
-    {id: 12, link: '/', title: 'wp', img: 'static/media/src/icons/wp.svg'},
-    {id: 12, link: '/', title: 'githab', img: 'static/media/src/icons/githab.svg'},
-    {id: 12, link: '/', title: 'telegram', img: 'static/media/src/icons/tg.svg'}
+    {id: 1, link: '/', title: 'githab', img: GitHab},
+    {id: 12, link: '/', title: 'wp', img: Wp},
+    {id: 12, link: '/', title: 'githab', img: GitHab},
+    {id: 12, link: '/', title: 'telegram', img: Tg}
   ],
   menu: [
     {
@@ -316,13 +321,13 @@ SecondStyle.args = {
       id: 1,
       title: 'Appstore',
       link: '#appstore',
-      img: 'static/media/src/icons/appstore.svg',
+      img: appstore,
     },
     {
       id: 2,
       title: 'Googleplay',
       link: '#googleplay',
-      img: 'static/media/src/icons/googleplay.svg',
+      img: googleplay,
     }
   ],
   menu: [
@@ -396,20 +401,20 @@ ThirdStyle.args = {
       id: 1,
       title: 'Appstore',
       link: '#appstore',
-      img: 'static/media/src/icons/appstore.svg',
+      img: appstore,
     },
     {
       id: 2,
       title: 'Googleplay',
       link: '#googleplay',
-      img: 'static/media/src/icons/googleplay.svg',
+      img: googleplay,
     }
   ],
   socials: [
-    {id: 1, link: '/', title: 'githab', img: 'static/media/src/icons/githab.svg'},
-    {id: 12, link: '/', title: 'wp', img: 'static/media/src/icons/wp.svg'},
-    {id: 12, link: '/', title: 'githab', img: 'static/media/src/icons/githab.svg'},
-    {id: 12, link: '/', title: 'telegram', img: 'static/media/src/icons/tg.svg'}
+    {id: 1, link: '/', title: 'githab', img: GitHab},
+    {id: 12, link: '/', title: 'wp', img: Wp},
+    {id: 12, link: '/', title: 'githab', img: GitHab},
+    {id: 12, link: '/', title: 'telegram', img: Tg}
   ],
   menu: [
     {
