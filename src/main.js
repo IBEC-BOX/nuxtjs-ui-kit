@@ -19,6 +19,7 @@ export { default as UiInput } from "./components/Input.vue";
 export { default as UiRadio } from "./components/Radio.vue";
 export { default as UiSelect } from "./components/Select.vue";
 export { default as UiTextArea } from "./components/TextArea.vue";
+export { default as UiFileSelect } from "./components/FileSelect.vue";
 //table
 export { default as UiTable } from "./components/Table.vue";
 
