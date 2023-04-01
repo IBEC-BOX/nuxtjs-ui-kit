@@ -1,8 +1,8 @@
 ![agrisom](https://ibecsystems.com/css/images/ibec-systems.svg)
 
-# Welcome to ibec UI header
+# Welcome to IBEC UI kit
 
-This is a Nuxt component library that will contain all ibec headers you need to start a new nuxt (C & D) project. Components are written with nuxt 2, HTML, SCSS, bootstrap 5 and fully configurable using props, slots, and css variables.
+This is a Nuxt component library that will contain all ibec ui components you need to start a new nuxt (C & D) project. Components are written with nuxt 2, HTML, SCSS, bootstrap 5 and fully configurable using props, slots, and css variables.
 
 > This library is currently under construction. I'll be publishing new components as son as they are ready for use
 
@@ -10,8 +10,8 @@ This is a Nuxt component library that will contain all ibec headers you need to 
 
 **Using npm or yarn**
 ```
-npm install ibec-ui-header
-yarn add ibec-ui-header
+npm install ibec-ui-kit
+yarn add ibec-ui-kit
 ```
 
 ## Usage
@@ -24,12 +24,12 @@ yarn add ibec-ui-header
 </template>
 
 <script lang="js">
-import UI from 'ibec-ui-header';
+import {HeaderOne} from 'ibec-ui-kit';
 
 export default {
   name: 'MyComponent',
   components: {
-    HeaderOne: UI.HeaderOne,
+    HeaderOne: HeaderOne,
   },
 };
 </script>
@@ -54,11 +54,11 @@ main.scss
 ```
 
 ## Repository
-Check out the code on github, [d.tem4ik/ibec-header-ui](https://ibecsystems.com/ru#/) **[soon]**
+Check out the code on github, [d.tem4ik/ibec-ui-kit](https://ibecsystems.com/ru#/) **[soon]**
 
 ## Documentation
-SOON (StoryBook)
-[documentation](https://ibecsystems.com/ru#/)
+StoryBook
+[documentation](http://www.chromatic.com/library?appId=63f77fcfd12622a3e085e406)
 
 ## Changelog
 All notable changes to this project will be documented in this file.
@@ -66,3 +66,12 @@ All notable changes to this project will be documented in this file.
 ### [0.1.4] - 2023-02-21
 - Init Library
 - HeaderOne
+
+### [0.1.5] - 2023-03-14
+- HeaderTwo
+- HeaderOne(fix)
+- Form Inputs
+- VeeValidate
+- V-Select
+- Table
+- rename Module
