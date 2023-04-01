@@ -13,6 +13,7 @@ export { default as Footer } from "./components/Footer/FooterOne.vue";
 //uiComponents
 export { default as Button } from "./components/Button.vue";
 export { default as Card } from "./components/Card/Card.vue";
+export { default as Carousel } from "./components/Carousel.vue";
 //form inputs
 export { default as UiCheckbox } from "./components/Checkbox.vue";
 export { default as UiInput } from "./components/Input.vue";
