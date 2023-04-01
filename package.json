@@ -79,7 +79,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "@nuxtjs/ibec-ui-kit@1.0.1"
+  }
 }
