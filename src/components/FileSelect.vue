@@ -114,6 +114,7 @@ export default {
   },
   computed: {
     allowedExtensionsRegExp() {
+      // eslint-disable-next-line
       return new RegExp(`\.(${this.allowedExtensions.join('|')})$`, 'i')
     },
     limitFiles () {
