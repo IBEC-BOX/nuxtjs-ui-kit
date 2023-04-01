@@ -1,19 +1,21 @@
 {
-  "name": "ibec-ui-kit",
-  "my-old-module-name": "ibec-ui-header",
-  "version": "0.1.6",
+  "name": "@nuxtjs/ibec-ui-kit",
+  "my-old-module-name": "ibec-ui-kit",
+  "version": "1.0.1",
   "private": false,
-  "description": "Ibec components",
+  "repository": "ibec-kits/nuxtjs-ibec-ui-kit",
+  "description": "Ibec UI components",
   "files": [
     "dist"
+  ],
+  "contributors": [
+    "Artyom Dugijiyev <d.tem4ik@gmail.com>"
   ],
   "author": {
     "name": "Tem4ik",
     "email": "d.tem4ik@gmail.com"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "build:npm": "npm run build:wc & npm run build:lib",
     "build:lib": "vue-cli-service build --target lib --name ibecUiKit 'src/main.js'",
     "build:wc": "vue-cli-service build --target wc --name ibecUiKit 'src/components/*.vue'",
@@ -28,9 +30,7 @@
     "core-js": "^3.8.3",
     "vee-validate": "<3.0.0",
     "vue": "^2.6.14",
-    "vue-i18n": "^9.2.2",
-    "vue-select": "^3.20.2",
-    "vuelidate": "^0.7.7"
+    "vue-select": "^3.20.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -77,6 +77,9 @@
     "last 2 versions",
     "not dead"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "readme": "ERROR: No README data found!",
-  "_id": "ibec-ui-kit@0.1.5"
+  "_id": "@nuxtjs/ibec-ui-kit@1.0.1"
 }
