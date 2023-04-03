@@ -1,7 +1,7 @@
 {
   "name": "@ibecsystems/nuxtjs-ui-kit",
   "my-old-module-name": "ibec-ui-kit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/IBEC-BOX/nuxtjs-ui-kit",
   "repository": {
     "type": "git",
