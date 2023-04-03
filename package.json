@@ -1,9 +1,12 @@
 {
-  "name": "@nuxtjs/ibec-ui-kit",
-  "my-old-module-name": "ibec-ui-kit",
+  "name": "ibec-ui-kit",
+  "my-old-module-name": "ibec-ui-header",
   "version": "1.0.1",
-  "private": false,
-  "repository": "ibec-kits/nuxtjs-ibec-ui-kit",
+  "homepage": "https://github.com/ibec-kits/nuxtjs-ibec-ui-kit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibec-kits/nuxtjs-ibec-ui-kit.git"
+  },
   "description": "Ibec UI components",
   "files": [
     "dist"
@@ -12,7 +15,7 @@
     "Artyom Dugijiyev <d.tem4ik@gmail.com>"
   ],
   "author": {
-    "name": "Tem4ik",
+    "name": "Artyom Dugijiyev",
     "email": "d.tem4ik@gmail.com"
   },
   "scripts": {
@@ -77,9 +80,7 @@
     "last 2 versions",
     "not dead"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "@nuxtjs/ibec-ui-kit@1.0.1"
+  "license": "ISC",
+  "publishConfig": {"access": "public"}
+
 }

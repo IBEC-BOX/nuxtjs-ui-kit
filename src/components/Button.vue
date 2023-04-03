@@ -18,6 +18,7 @@
       <slot />
       <slot name="rightIcon" />
     </template>
+    <slot v-else-if="hasLoadingSlot" name="spinner"></slot>
     <span v-else :class="`spinner-border`" role="status" aria-hidden="true"></span>
 
   </button>
@@ -84,6 +85,11 @@ export default {
       default: ''
     }
   },
+  computed: {
+    hasLoadingSlot() {
+      return !!this.$slots.spinner;
+    }
+  }
 }
 </script>
 

@@ -1,5 +1,8 @@
 ![agrisom](https://ibecsystems.com/css/images/ibec-systems.svg)
 
+[![npm version][npm-version-src]][npm-version-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
+
 # Welcome to IBEC UI kit
 
 This is a Nuxt component library that will contain all ibec ui components you need to start a new nuxt (C & D) project. Components are written with nuxt 2, HTML, SCSS, bootstrap 5 and fully configurable using props, slots, and css variables.
@@ -75,3 +78,14 @@ All notable changes to this project will be documented in this file.
 - V-Select
 - Table
 - rename Module
+- 
+
+Copyright (c) Ibec Systems
+
+<!-- Badges -->
+[npm-version-src]: https://badgen.net/npm/v/ibec-ui-kit
+[npm-version-href]: https://www.npmjs.com/package/ibec-ui-kit
+
+[github-actions-ci-src]: https://badgen.net/github/checks/styfle/packagephobia/main
+[github-actions-ci-href]: https://github.com/ibec-kits/nuxtjs-ibec-ui-kit
+
