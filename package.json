@@ -1,11 +1,11 @@
 {
-  "name": "ibec-ui-kit",
+  "name": "@ibecsystems/nuxtjs-ui-kit",
   "my-old-module-name": "ibec-ui-header",
   "version": "1.0.1",
-  "homepage": "https://github.com/ibec-kits/nuxtjs-ibec-ui-kit",
+  "homepage": "https://github.com/IBEC-BOX/nuxtjs-ui-kit",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ibec-kits/nuxtjs-ibec-ui-kit.git"
+    "url": "git+https://github.com/IBEC-BOX/nuxtjs-ui-kit.git"
   },
   "description": "Ibec UI components",
   "files": [
