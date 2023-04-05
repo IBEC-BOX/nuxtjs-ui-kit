@@ -9,8 +9,9 @@ All notable changes to this project will be documented in this file.
 - Accordion
 ### Changed
 - Updated docs
+- Update Table
 ### Fixed
-_
+- Remove storybook-static folder and add to gitignore
 
 ## [1.0.2] - 2023-04-03
 ### Added
