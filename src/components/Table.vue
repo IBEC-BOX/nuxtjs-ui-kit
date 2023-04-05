@@ -5,14 +5,14 @@
       <table :class="{'table': true,  'table-striped': striped, 'table-hover': hover}">
         <thead>
           <tr>
-            <th :class="`table-${field.variant}`" v-for="field in fields" :key="field.key">
+            <th :class="field.variant ? `table-${field.variant}` : null" v-for="field in fields" :key="field.key">
               {{ field.label || field.key.replaceAll('_', ' ') | capitalize }}
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr :class="`table-${item._rowVariant}`" v-for="item in items" :key="item.id">
-            <td :class="`table-${field.variant}`" v-for="field in fields" :key="field.key">{{ item[field.key] }}</td>
+          <tr :class="item._rowVariant ? `table-${item._rowVariant}` : null" v-for="item in items" :key="item.id">
+            <td :class="field.variant ? `table-${field.variant}` : null" v-for="field in fields" :key="field.key">{{ item[field.key] }}</td>
           </tr>
         </tbody>
       </table>
