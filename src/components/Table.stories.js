@@ -6,8 +6,13 @@ export default {
   component: Table,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
+    title: {control: 'text'},
+    total: {control: 'number'},
+    total_title: {control: 'text'},
     fields: {control: 'array'},
-    items: {control: 'array'}
+    items: {control: 'array'},
+    striped: {control: 'boolean'},
+    hover: {control: 'boolean'}
   },
 };
 
@@ -21,6 +26,9 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
+  title: 'Team members',
+  total: 100,
+  total_title: 'users',
   fields: [
     // {
     //   key: 'index',
@@ -54,5 +62,7 @@ Primary.args = {
     { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
     { age: 38, first_name: 'Jami', last_name: 'Carney' },
   ],
+  striped: false,
+  hover: false
 };
 

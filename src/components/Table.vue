@@ -1,29 +1,21 @@
 <template>
-  <div>
+  <div class="ui-table">
+    <div class="ui-table__title">{{ title }} <div v-if="total" class="ui-table__total">{{ total }} {{ total_title }}</div></div>
     <div class="table-responsive">
-      <table class="table table-striped table-hover">
+      <table :class="{'table': true,  'table-striped': striped, 'table-hover': hover}">
         <thead>
           <tr>
-            <th v-for="field in fields" :key="field.key">
+            <th :class="`table-${field.variant}`" v-for="field in fields" :key="field.key">
               {{ field.label || field.key.replaceAll('_', ' ') | capitalize }}
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in items" :key="item.id">
-            <td v-for="field in fields" :key="field.key">{{ item[field.key] }}</td>
+          <tr :class="`table-${item._rowVariant}`" v-for="item in items" :key="item.id">
+            <td :class="`table-${field.variant}`" v-for="field in fields" :key="field.key">{{ item[field.key] }}</td>
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="table-responsive mobile-table">
-      <div v-for="item in items" :key="item.id" class="border mb-3 p-2">
-        <div v-for="(field, index) in fields" :key="index" class="border-bottom p-2">
-          <p><b>{{ field.label || field.key.replaceAll('_', ' ') | capitalize }}</b></p>
-          <p>{{ item[field.key] }}</p>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -33,7 +25,7 @@
 import filters from '../../src/mixins/filter'
 export default {
   name: "UiTable",
-  props: ['items', 'fields'],
+  props: ['title', 'items', 'fields', 'total', 'total_title', 'striped', 'hover'],
   mixins: [filters],
   methods: {
     testFunction(val) {
@@ -44,6 +36,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.ui-table{
+  &__title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #101828;
+    margin-bottom: 19px;
+  }
+  &__total{
+    display: inline-block;
+    padding: 2px 8px;
+    background: #F9F5FF;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #6941C6;
+  }
+}
 .table {
   table {
     @media (max-width: 768px) {
