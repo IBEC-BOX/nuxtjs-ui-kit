@@ -12,6 +12,7 @@
       !title ? 'btn-icon' : ''
     ]"
     :disabled="disabled"
+    @click="handleClick"
   >
     <template v-if="!loading">
       <slot name="leftIcon" />
@@ -89,6 +90,13 @@ export default {
     hasLoadingSlot() {
       return !!this.$slots.spinner;
     }
+  },
+  methods:{
+    handleClick(event) {
+      if (!this.disabled) {
+        this.$emit('click', event)
+      }
+    },
   }
 }
 </script>

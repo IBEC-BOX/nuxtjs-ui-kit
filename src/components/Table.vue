@@ -5,14 +5,24 @@
       <table :class="{'table': true,  'table-striped': striped, 'table-hover': hover}">
         <thead>
           <tr>
-            <th :class="field.variant ? `table-${field.variant}` : null" v-for="field in fields" :key="field.key">
+            <th :class="field.variant ? `table-${field.variant}` : null" v-for="field in headF" :key="field.key">
+              <slot :name="`pre-${field.slotHead}`" :data="field" />
+
               {{ field.label || field.key.replaceAll('_', ' ') | capitalize }}
+
+              <slot :name="field.slotHead" :data="field" />
             </th>
           </tr>
         </thead>
         <tbody>
           <tr :class="item._rowVariant ? `table-${item._rowVariant}` : null" v-for="item in items" :key="item.id">
-            <td :class="field.variant ? `table-${field.variant}` : null" v-for="field in fields" :key="field.key">{{ item[field.key] }}</td>
+            <td :class="field.variant ? `table-${field.variant}` : null" v-for="field in headF" :key="field.key">
+              <slot :name="`pre-${field.slotHead}`" :data="field" />
+
+              {{ item[field.key] }}
+
+              <slot :name="field.slotBody" :data="item" />
+            </td>
           </tr>
         </tbody>
       </table>
@@ -23,15 +33,11 @@
 
 <script>
 import filters from '../../src/mixins/filter'
+
 export default {
   name: "UiTable",
-  props: ['title', 'items', 'fields', 'total', 'total_title', 'striped', 'hover'],
+  props: ['title', 'items', 'headF', 'total', 'total_title', 'striped', 'hover'],
   mixins: [filters],
-  methods: {
-    testFunction(val) {
-      console.log(val)
-    },
-  },
 }
 </script>
 
