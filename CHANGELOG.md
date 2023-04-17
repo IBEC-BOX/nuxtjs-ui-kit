@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Badge
 - Accordion
 - Tooltip (directive + component)
+- Tabs
 ### Changed
 - Updated docs
 - Update Table
