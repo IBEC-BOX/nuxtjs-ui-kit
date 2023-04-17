@@ -1,4 +1,5 @@
 import Table from './Table.vue';
+import Button from './Button.vue';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
@@ -9,7 +10,7 @@ export default {
     title: {control: 'text'},
     total: {control: 'number'},
     total_title: {control: 'text'},
-    fields: {control: 'array'},
+    headF: {control: 'array'},
     items: {control: 'array'},
     striped: {control: 'boolean'},
     hover: {control: 'boolean'}
@@ -19,8 +20,30 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Table },
-  template: `<Table v-bind="$props"></Table>`,
+  components: { Table, Button },
+  template: `
+  <Table v-bind="$props">
+    <template #head(index)="{ data }">
+      <Button @click="testFunction(data)">test</Button>
+    </template>
+
+    <template #pre-head(index)="{ data }">
+      <Button @click="testFunction(data)">pre test</Button>
+    </template>
+
+    <template #pre-cell(last_name)="{ data }">
+      <Button @click="testFunction(data)">pre test222</Button>
+    </template>
+
+    <template #cell(last_name)="{ data }">
+      <Button @click="testFunction(data)">test222</Button>
+    </template>
+  </Table>`,
+  methods: {
+    testFunction(data){
+      console.log('222', data)
+    }
+  }
 });
 
 export const Primary = Template.bind({});
@@ -29,15 +52,17 @@ Primary.args = {
   title: 'Team members',
   total: 100,
   total_title: 'users',
-  fields: [
-    // {
-    //   key: 'index',
-    //   slot: 'cell(index)',
-    //   slotHead: 'head(index)',
-    // },
+  headF: [
+    {
+      key: 'index',
+      slotBody: 'cell(index)',
+      slotHead: 'head(index)',
+    },
     {
       key: 'last_name',
       sortable: true,
+      slotBody: 'cell(last_name)',
+      slotHead: 'head(last_name)',
     },
     {
       key: 'first_name',
