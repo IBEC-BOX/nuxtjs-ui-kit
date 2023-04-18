@@ -23,21 +23,21 @@ const Template = (args, { argTypes }) => ({
   components: { Table, Button },
   template: `
   <Table v-bind="$props">
-    <template #head(index)="{ data }">
-      <Button @click="testFunction(data)">test</Button>
-    </template>
+<!--    <template #head(index)="{ data }">-->
+<!--      <Button @click="testFunction(data)">test</Button>-->
+<!--    </template>-->
 
-    <template #pre-head(index)="{ data }">
-      <Button @click="testFunction(data)">pre test</Button>
-    </template>
+<!--    <template #pre-head(index)="{ data }">-->
+<!--      <Button @click="testFunction(data)">pre test</Button>-->
+<!--    </template>-->
 
-    <template #pre-cell(last_name)="{ data }">
-      <Button @click="testFunction(data)">pre test222</Button>
-    </template>
+<!--    <template #pre-cell(last_name)="{ data }">-->
+<!--      <Button @click="testFunction(data)">pre test222</Button>-->
+<!--    </template>-->
 
-    <template #cell(last_name)="{ data }">
-      <Button @click="testFunction(data)">test222</Button>
-    </template>
+<!--    <template #cell(last_name)="{ data }">-->
+<!--      <Button @click="testFunction(data)">test222</Button>-->
+<!--    </template>-->
   </Table>`,
   methods: {
     testFunction(data){
