@@ -65,7 +65,7 @@ export default {
   border-radius: 0.5rem;
   padding: 1.125rem 1rem;
   &.is-invalid {
-    background-position: right 1rem center;
+    background-image: none;
   }
   &:not(.is-invalid) {
     &:not(:disabled) {

@@ -89,10 +89,37 @@ export default {
 .v-select {
   padding: 0;
   border: none;
+  &.vs--open {
+    .vs__dropdown-toggle {
+      &::before {
+        transform: translateY(-50%) rotate(180deg);
+        transition: transform 150ms ease-out;
+      }
+    }
+  }
   .vs__dropdown-toggle {
     border-radius: 0.5rem;
     height: 100%;
     padding: 1.125rem 1rem;
+    position: relative;
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: no-repeat center url("../icons/carret.svg");
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 300ms ease;
+    }
+  }
+  &.is-invalid {
+    background-image: none;
+    padding-right: 0;
+    .vs__dropdown-toggle {
+      border-color: var(--bs-danger);
+    }
   }
   &:not(.is-invalid) {
     &:not(.is-disabled) {
@@ -113,7 +140,11 @@ export default {
 }
 .vs__selected {
   margin: 0;
-  /*padding: 0;*/
+}
+
+// hide default arrow
+.vs__open-indicator {
+  display: none;
 }
 </style>
 
