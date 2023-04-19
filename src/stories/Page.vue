@@ -140,8 +140,7 @@
         <TextArea
           v-model="form.comment"
           name="comment"
-          label="Comment"
-          placeholder="Введите комментарий"
+          labelPlaceholder="Comment"
           v-validate="{ required: true }"
         />
 

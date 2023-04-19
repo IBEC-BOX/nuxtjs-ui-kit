@@ -2,12 +2,6 @@
   <div>
     <div class="mb-3">
       <div class="floating">
-        <label
-          :for="name"
-          class="form-label"
-          :class="{ active: searchChanged || value }"
-          >{{ labelPlaceholder }}</label
-        >
         <v-select
           :id="name"
           :name="name"
@@ -34,6 +28,15 @@
           :aria-describedby="`${name}-live-feedback`"
           :data-vv-as="name"
         />
+        <label
+          :for="name"
+          class="form-label"
+          :class="{
+            'is-invalid': errors && errors.items.find((x) => x.field === name),
+            active: searchChanged || value,
+          }"
+          >{{ labelPlaceholder }}</label
+        >
       </div>
       <div class="invalid-feedback">
         {{
@@ -149,6 +152,12 @@ export default {
 </style>
 
 <style lang="scss" scoped>
+.form-label {
+  &.is-invalid {
+    color: var(--bs-danger);
+  }
+}
+
 .form-text {
   margin-top: 0.5rem;
 }

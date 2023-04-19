@@ -3,6 +3,7 @@
     <div class="mb-3">
       <div class="floating">
         <input
+          autocomplete="off"
           :data-testid="name"
           :id="name"
           :name="name"
@@ -18,9 +19,15 @@
             'is-invalid': errors && errors.items.find((x) => x.field === name),
           }"
         />
-        <label :for="name" class="form-label" :class="{ active: value }">{{
-          labelPlaceholder
-        }}</label>
+        <label
+          :for="name"
+          class="form-label"
+          :class="{
+            'is-invalid': errors && errors.items.find((x) => x.field === name),
+            active: value,
+          }"
+          >{{ labelPlaceholder }}</label
+        >
       </div>
       <div v-if="errors" class="invalid-feedback">
         {{
@@ -59,6 +66,9 @@ export default {
 .form-label {
   color: #74767a;
   margin: 0;
+  &.is-invalid {
+    color: var(--bs-danger);
+  }
 }
 
 .form-control {
@@ -66,6 +76,9 @@ export default {
   padding: 1.125rem 1rem;
   &.is-invalid {
     background-image: none;
+    & > label {
+      color: var(--bs-danger);
+    }
   }
   &:not(.is-invalid) {
     &:not(:disabled) {
