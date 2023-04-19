@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Updated docs
 - Update Table
 - Update Button
+- Update Inputs (by design)
 ### Fixed
 - Remove storybook-static folder and add to gitignore
 

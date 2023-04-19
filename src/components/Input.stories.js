@@ -8,12 +8,12 @@ export default {
   argTypes: {
     value: { control: 'text' },
     name: { control: 'text' },
-    label: { control: 'text' },
+    labelPlaceholder: { control: 'text' },
     description: { control: 'text' },
     type: { control: 'text' },
-    placeholder: { control: 'text' },
     required: { control: 'boolean' },
-    validateExample: {control: 'object'}
+    validateExample: { control: 'object' },
+    disabled: { control: 'boolean' }
   },
 };
 
@@ -27,14 +27,14 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
-  validateExample: {"required": "true", "email": "true"},
+  validateExample: { "required": "true", "email": "true" },
   value: '',
   name: 'input1',
-  label: 'Label',
+  labelPlaceholder: 'Label',
   description: 'Description',
   type: 'text',
-  placeholder: 'Placeholder',
   required: false,
+  disabled: false
 };
 
 export const Required = Template.bind({});
@@ -53,6 +53,12 @@ export const Password = Template.bind({});
 Password.args = {
   ...Primary.args,
   type: 'password',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  ...Primary.args,
+  disabled: true,
 };
 
 export const Email = Template.bind({});
