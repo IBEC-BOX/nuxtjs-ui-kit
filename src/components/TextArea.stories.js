@@ -8,12 +8,13 @@ export default {
   argTypes: {
     value: { control: 'text' },
     name: { control: 'text' },
-    label: { control: 'text' },
+    labelPlaceholder: { control: 'text' },
     description: { control: 'text' },
-    placeholder: { control: 'text' },
     rows: { control: 'number' },
     maxRows: { control: 'number' },
-    validateExample: {control: 'object'},
+    validateExample: { control: 'object' },
+    disabled: { control: 'boolean' },
+    autosize: { control: 'boolean' }
   },
 };
 
@@ -27,12 +28,13 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
-  validateExample: {"required": "true", "min": "5"},
+  validateExample: { "required": "true", "min": "5" },
   name: 'my-textarea',
-  label: 'My Textarea',
+  labelPlaceholder: 'My Textarea',
   description: 'This is my textarea component',
   value: '',
-  placeholder: 'Enter some text here...',
   rows: 3,
   maxRows: 6,
+  disabled: false,
+  autosize: true,
 };

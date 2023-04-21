@@ -12,12 +12,14 @@
       !title ? 'btn-icon' : ''
     ]"
     :disabled="disabled"
+    @click="handleClick"
   >
     <template v-if="!loading">
       <slot name="leftIcon" />
       <slot />
       <slot name="rightIcon" />
     </template>
+    <slot v-else-if="hasLoadingSlot" name="spinner"></slot>
     <span v-else :class="`spinner-border`" role="status" aria-hidden="true"></span>
 
   </button>
@@ -84,6 +86,18 @@ export default {
       default: ''
     }
   },
+  computed: {
+    hasLoadingSlot() {
+      return !!this.$slots.spinner;
+    }
+  },
+  methods:{
+    handleClick(event) {
+      if (!this.disabled) {
+        this.$emit('click', event)
+      }
+    },
+  }
 }
 </script>
 

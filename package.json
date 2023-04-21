@@ -1,10 +1,13 @@
 {
-  "name": "@nuxtjs/ibec-ui-kit",
+  "name": "@ibecsystems/nuxtjs-ui-kit",
   "my-old-module-name": "ibec-ui-kit",
-  "version": "1.0.1",
-  "private": false,
-  "repository": "ibec-kits/nuxtjs-ibec-ui-kit",
-  "description": "Ibec UI components",
+  "version": "1.0.3",
+  "homepage": "https://github.com/IBEC-BOX/nuxtjs-ui-kit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IBEC-BOX/nuxtjs-ui-kit.git"
+  },
+  "description": "Ibec Nuxtjs UI components",
   "files": [
     "dist"
   ],
@@ -12,7 +15,7 @@
     "Artyom Dugijiyev <d.tem4ik@gmail.com>"
   ],
   "author": {
-    "name": "Tem4ik",
+    "name": "Artyom Dugijiyev",
     "email": "d.tem4ik@gmail.com"
   },
   "scripts": {
@@ -28,6 +31,7 @@
   "dependencies": {
     "bootstrap": "5.3.0-alpha1",
     "core-js": "^3.8.3",
+    "v-calendar": "^2.4.1",
     "vee-validate": "<3.0.0",
     "vue": "^2.6.14",
     "vue-select": "^3.20.2"
@@ -77,6 +81,7 @@
     "last 2 versions",
     "not dead"
   ],
+  "license": "ISC",
   "publishConfig": {
     "access": "public"
   }
