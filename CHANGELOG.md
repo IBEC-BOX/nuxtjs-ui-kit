@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Accordion
 - Tooltip (directive + component)
 - Tabs
+- Calendar
 ### Changed
 - Updated docs
 - Update Table
